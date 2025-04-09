@@ -4,7 +4,7 @@ const redirectUri = 'https://idiamer0707.github.io/Frontend/';
 const scope = 'https://www.googleapis.com/auth/youtube';
 
 let accessToken = '';
- 
+
 // Al cargar la página, verificar si hay datos en sessionStorage
 window.addEventListener('load', async () => {
   const savedAccessToken = sessionStorage.getItem('accessToken');
@@ -35,9 +35,15 @@ window.addEventListener('load', async () => {
   }
 });
 
-// Función para redirigir al flujo de autenticación OAuth
-document.getElementById('btn-login-youtube').addEventListener('click', () => {
-  startAuthFlow();
+window.addEventListener('DOMContentLoaded', () => {
+    const loginButton = document.getElementById('btn-login-youtube');
+    if (loginButton) {
+      loginButton.addEventListener('click', () => {
+        startAuthFlow();
+      });
+    } else {
+      console.error("El botón con id 'btn-login-youtube' no existe en el DOM.");
+    }
 });
 
 function startAuthFlow() {
@@ -68,7 +74,6 @@ async function fetchUserChannelData() {
     // Guardar los datos del canal en sessionStorage
     sessionStorage.setItem('channelData', JSON.stringify(channelData));
     console.log("datos guardados ",channelData)
-
 
     // Mostrar los datos
     displayChannelData(channelData);

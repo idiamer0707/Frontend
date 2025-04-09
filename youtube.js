@@ -1,5 +1,5 @@
-const clientId = '47331039917-2602silcci7hoiuqi7aqp477d5tsh31v.apps.googleusercontent.com';
-const clientSecret = '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';
+const clientId = '47331039917-5heqfuko19cvc2le94t53mr1ad4f9hml.apps.googleusercontent.com';
+const clientSecret = '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';
 const redirectUri = 'https://idiamer0707.github.io/Frontend/';
 const scope = 'https://www.googleapis.com/auth/youtube';
 

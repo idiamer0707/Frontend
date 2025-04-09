@@ -4,7 +4,7 @@ const redirectUri = 'https://idiamer0707.github.io/Frontend/';
 const scope = 'https://www.googleapis.com/auth/youtube';
 
 let accessToken = '';
-
+ 
 // Al cargar la página, verificar si hay datos en sessionStorage
 window.addEventListener('load', async () => {
   const savedAccessToken = sessionStorage.getItem('accessToken');

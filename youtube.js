@@ -1,6 +1,6 @@
 const clientId = '126569545869-g7jdjkh3vmmc4g0acbv0862hat3i5l4m.apps.googleusercontent.com';
 const clientSecret = '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';
-const redirectUri = 'https://idiamer0707.github.io/PruebaAPIYouTube/';
+const redirectUri = 'https://idiamer0707.github.io/Frontend/';
 const scope = 'https://www.googleapis.com/auth/youtube';
 
 let accessToken = '';

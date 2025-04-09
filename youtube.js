@@ -67,6 +67,8 @@ async function fetchUserChannelData() {
 
     // Guardar los datos del canal en sessionStorage
     sessionStorage.setItem('channelData', JSON.stringify(channelData));
+    console.log("datos guardados ",channelData)
+
 
     // Mostrar los datos
     displayChannelData(channelData);

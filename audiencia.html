@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audiencia - BandMetrics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">BandMetrics</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="audiencia.html">Audiencia</a></li>
+          <li><a href="logueo.html">Conectar Redes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección de Audiencia -->
+  <main class="dashboard">
+    <section class="audience-overview">
+      <h2>Demografía de Audiencia</h2>
+      <div class="audience-metrics">
+        <!-- Edad -->
+        <div class="metric">
+          <h3>Edad Predominante</h3>
+          <p>18-25 años</p>
+        </div>
+        <!-- Localización -->
+        <div class="metric">
+          <h3>Localización</h3>
+          <p>América Latina</p>
+        </div>
+        <!-- Intereses -->
+        <div class="metric">
+          <h3>Intereses</h3>
+          <p>Pop, Reggaetón</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gráfico de Audiencia -->
+    <section class="audience-graph">
+      <h2>Distribución de Audiencia</h2>
+      <p>Visualiza cómo se distribuyen tus seguidores en función de su edad, género y ubicación.</p>
+      <canvas id="audienceChart" aria-label="Gráfico de distribución de audiencia" role="img"></canvas>
+    </section>
+
+    <!-- Datos Sociales -->
+    <section class="social-audience">
+      <h2>Audiencia por Red Social</h2>
+      <div class="social-metrics">
+        <div class="social-card">
+          <h3>YouTube</h3>
+          <p><strong>Seguidores:</strong> 1,200,000</p>
+          <p><strong>Edad:</strong> 18-25 años</p>
+          <p><strong>Intereses:</strong> Música, Vlogs</p>
+        </div>
+        <div class="social-card">
+          <h3>Instagram</h3>
+          <p><strong>Seguidores:</strong> 800,000</p>
+          <p><strong>Edad:</strong> 20-30 años</p>
+          <p><strong>Intereses:</strong> Moda, Lifestyle</p>
+        </div>
+        <div class="social-card">
+          <h3>TikTok</h3>
+          <p><strong>Seguidores:</strong> 300,000</p>
+          <p><strong>Edad:</strong> 16-24 años</p>
+          <p><strong>Intereses:</strong> Challenges, Tendencias</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 BandMetrics. Todos los derechos reservados.</p>
+  </footer>
+  <script src="youtube.js"></script>
+</body>
+</html>

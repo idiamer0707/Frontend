@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métricas para Artistas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">BandMetrics</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="audiencia.html">Audiencia</a></li>
+          <li><a href="logueo.html">Conectar Redes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+     <!-- Panel principal -->
+     <main class="dashboard">
+      <section id="logueo" class="login-section">
+        <h2>Conectar Redes Sociales</h2>
+        <p>Para acceder a tus métricas, inicia sesión en las plataformas disponibles:</p>
+        <div class="login-buttons">
+          <a href="logueo.html#youtube-login" class="btn-youtube">Conectar con YouTube</a>
+          <a href="logueo.html#facebook-login" class="btn-facebook">Conectar con Facebook/Instagram</a>
+          <a href="logueo.html#spotify-login" class="btn-spotify">Conectar con Spotify</a>
+          <a href="logueo.html#tiktok-login" class="btn-tiktok">Conectar con TikTok</a>
+        </div>
+      </section>
+    </main>
+
+  <!-- Panel principal con métricas -->
+  <main class="dashboard">
+    <section class="overview">
+      <div class="card">
+        <h2>Reproducciones Totales</h2>
+        <p><strong>Última semana:</strong> 500,000</p>
+        <p><strong>Total histórico:</strong> 10,000,000</p>
+      </div>
+      <div class="card">
+        <h2>Top Canciones</h2>
+        <ul>
+          <li><strong>1. Canción Éxito</strong> - 2,000,000 reproducciones</li>
+          <li><strong>2. Balada Famosa</strong> - 1,500,000 reproducciones</li>
+          <li><strong>3. Tema Energético</strong> - 1,200,000 reproducciones</li>
+        </ul>
+      </div>
+    </section>
+    <section class="charts">
+      <h2>Impacto por Plataforma</h2>
+      <canvas id="platformImpactChart" aria-label="Gráfico del impacto por plataforma" role="img"></canvas>
+    </section>
+
+    <section class="audience">
+      <h2>Demografía de Audiencia</h2>
+      <p><strong>Edad predominante:</strong> 18-25 años</p>
+      <p><strong>Localización:</strong> América Latina</p>
+      <p><strong>Intereses:</strong> Pop, Reggaetón</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 BandMetrics. Todos los derechos reservados.</p>
+  </footer>
+  <script src="youtube.js"></script>
+</body>
+</html>

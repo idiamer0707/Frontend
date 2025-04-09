@@ -1,0 +1,345 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #800000; /* Rojo oscuro estilo elegante */
+  color: white;
+  padding: 1rem;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* Texto en blanco */
+  font-weight: bold;
+  border: none;
+}
+
+.nav-links a:hover {
+  color: #ff0000; 
+}
+
+/* Dashboard */
+.dashboard {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Overview Cards */
+.overview {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+
+  background-color: #333; /* Gris oscuro */
+  border: 1px solid #ffffff; 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.5); 
+  padding: 1rem;
+  flex: 2;
+  min-width: 250px;
+  text-align: center;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #ffffff; 
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+/* Charts Section */
+.charts {
+  background-color: #333; 
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #ffffff; 
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.5);
+}
+
+.charts h2 {
+  color: #ffffff; 
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background-color: #800000; /* Rojo oscuro */
+  color: white;
+  padding: 1rem;
+}
+
+/* Login Section */
+.login-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.login-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #ffffff; 
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Buttons for Social Platforms */
+.btn-youtube {
+  background-color: #ff0000; /* Rojo de YouTube */
+}
+
+.btn-facebook {
+  background-color: #4267B2; /* Azul de Facebook */
+}
+
+.btn-spotify {
+  background-color: #1db954; /* Verde de Spotify */
+}
+
+.btn-tiktok {
+  background-color: #000000; /* Negro de TikTok */
+}
+
+/* Cards (General Login Section) */
+.login-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card h3 {
+  color: #ffffff; /* Rojo brillante para los títulos */
+}
+
+.card button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #ffffff; 
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Login Links */
+.login-section a {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Colors for Platforms */
+#YouTube{
+  background-color: #ff0000;
+  
+}
+
+#Facebook {
+  background-color:#4267B2;
+  
+/* color: #4267B2; */
+}
+
+#Spotify {
+  background-color: #1db954; 
+}
+
+#TikTok {
+  background-color: #000000; 
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .overview {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%; /* Cada tarjeta ocupa todo el ancho en pantallas pequeñas */
+  }
+
+  .impact-platforms {
+    gap: 0.5rem; /* Reduce el espacio entre tarjetas */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 0.8rem; /* Reduce el padding para pantallas muy pequeñas */
+  }
+}
+
+/* Audience Section */
+.audience-overview {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.audience-overview h2 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  color: #ffcc00;
+}
+
+.audience-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem auto;
+}
+
+.metric {
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  text-align: center;
+  width: 250px;
+}
+
+.metric h3 {
+  font-size: 1.5rem;
+  color: #ff6600;
+}
+
+.metric p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Audience Graph */
+.audience-graph {
+  margin: 2rem auto;
+  text-align: center;
+  background-color: #222;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+}
+
+.audience-graph h2 {
+  color: #00ffcc;
+  font-size: 1.8rem;
+}
+
+/* Social Audience */
+.social-audience {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.social-audience h2 {
+  font-size: 2rem;
+  color: #ffcc00;
+  margin-bottom: 1rem;
+}
+
+.social-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-card {
+  background-color: #222;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+}
+
+.social-card h3 {
+  color: #ff6600;
+  font-size: 1.5rem;
+}
+
+.social-card p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* Responsive Design for Audience */
+@media (max-width: 768px) {
+  .audience-metrics, .social-metrics {
+    flex-direction: column;
+  }
+
+  .metric, .social-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .audience-overview h2, .social-audience h2 {
+    font-size: 1.5rem;
+  }
+
+  .metric h3, .social-card h3 {
+    font-size: 1.2rem;
+  }
+}
+

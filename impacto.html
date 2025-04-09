@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impacto - BandMetrics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">BandMetrics</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="audiencia.html">Audiencia</a></li>
+          <li><a href="logueo.html">Conectar Redes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección de Impacto -->
+  <main class="dashboard">
+    <section class="impact-section">
+      <h2>Impacto por Plataforma</h2>
+      <div class="impact-platforms">
+        <!-- Tarjeta para YouTube -->
+        <div class="card">
+          <h3 id="YouTube">YouTube</h3>
+          <div id="youtubeData">
+            <p><strong>Seguidores:</strong> <span id="subs"></span></p>
+            <p><strong>Total histórico:</strong> <span id="views"></span></p>
+          </div>
+          <p id="youtubeMessage" style="display: none;">Inicia sesión para ver tus datos</p>
+        </div>
+        <!-- Tarjeta para Facebook -->
+        <div class="card">
+          <h3 id="Facebook">Facebook/Instagram</h3>
+          <p><strong>Seguidores:</strong> 800,000</p>
+          <p><strong>Última semana:</strong> 150,000 interacciones</p>
+          <p><strong>Total histórico:</strong> 3,200,000 interacciones</p>
+        </div>
+        <!-- Tarjeta para Spotify -->
+        <div class="card">
+          <h3 id="Spotify">Spotify</h3>
+          <p><strong>Seguidores:</strong> 500,000</p>
+          <p><strong>Última semana:</strong> 80,000 reproducciones</p>
+          <p><strong>Total histórico:</strong> 1,500,000 reproducciones</p>
+        </div>
+        <!-- Tarjeta para TikTok -->
+        <div class="card">
+          <h3 id="TikTok">TikTok</h3>
+          <p><strong>Seguidores:</strong> 300,000</p>
+          <p><strong>Última semana:</strong> 20,000 vistas</p>
+          <p><strong>Total histórico:</strong> 300,000 vistas</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección del Resumen Total -->
+    <section class="total-impact">
+      <h2>Impacto Total</h2>
+      <p><strong>Seguidores totales:</strong> 2,800,000</p>
+      <p><strong>Última semana:</strong> 500,000 interacciones</p>
+      <p><strong>Total histórico:</strong> 10,000,000 interacciones</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 BandMetrics. Todos los derechos reservados.</p>
+  </footer>
+  <script src="youtube.js"></script>
+</body>
+</html>

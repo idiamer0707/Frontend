@@ -207,6 +207,9 @@ window.addEventListener('load', () => {
         document.getElementById('likesF').innerText = `Total de Likes: ${facebookPostData.totalLikes}`;
         document.getElementById('commentsF').innerText = `Total de Comentarios: ${facebookPostData.totalComments}`;
         document.getElementById('viewsF').innerText = `Total de Impresiones: ${facebookPostData.totalImpressions}`;
+
+        document.getElementById('facebookData').style.display = 'none';
+        document.getElementById('facebookMessage').style.display = 'block';
     } else {
         console.log('No hay datos de posts de Facebook en sessionStorage.');
     }
@@ -223,6 +226,10 @@ window.addEventListener('load', () => {
         document.getElementById('likesI').innerText = `Total de Likes: ${instagramPostData.totalLikes}`;
         document.getElementById('commentsI').innerText = `Total de Comentarios: ${instagramPostData.totalComments}`;
         document.getElementById('viewsI').innerText = `Total de Vistas: ${instagramPostData.totalViews}`;
+
+    
+        document.getElementById('instagramData').style.display = 'none';
+        document.getElementById('instagramMessage').style.display = 'block';
     } else {
         console.log('No hay datos de posts de Instagram en sessionStorage.');
     }

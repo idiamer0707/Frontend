@@ -49,6 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const loginButton = document.getElementById('btn-login-youtube');
     if (loginButton) {
       loginButton.addEventListener('click', () => {
+        sessionStorage.removeItem('accessToken')
         startAuthFlow();
       });
     } else {

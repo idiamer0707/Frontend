@@ -122,6 +122,7 @@ function fetchInstagramPosts(instaId) {
                 });
             });
 
+
             Promise.all(promises).then(() => {
                 const instagramStats = {
                     totalLikes: totalLikesI,
@@ -185,7 +186,45 @@ document.getElementById('btn-login-facebook').addEventListener('click', () => {
     loginWithPage(appIdpagina);
 });
 
-function mostrartodo(){
-    
 
-}
+// Mostrar datos guardados al cargar la página
+window.addEventListener('load', () => {
+    // Recuperar datos de sessionStorage
+    const facebookPageData = JSON.parse(sessionStorage.getItem('facebookPageData'));
+    const instagramData = JSON.parse(sessionStorage.getItem('instagramData'));
+    const facebookPostData = JSON.parse(sessionStorage.getItem('facebookPostData'));
+    const instagramPostData = JSON.parse(sessionStorage.getItem('instagramPostData'));
+
+
+    // Mostrar datos de la página de Facebook
+    if (facebookPageData) {
+        document.getElementById('subsF').innerText = `Número de seguidores: ${facebookPageData.followers}`;
+    } else {
+        console.log('No hay datos de la página de Facebook en sessionStorage.');
+    }
+    // Mostrar estadísticas de los posts de Facebook
+    if (facebookPostData) {
+        document.getElementById('likesF').innerText = `Total de Likes: ${facebookPostData.totalLikes}`;
+        document.getElementById('commentsF').innerText = `Total de Comentarios: ${facebookPostData.totalComments}`;
+        document.getElementById('viewsF').innerText = `Total de Impresiones: ${facebookPostData.totalImpressions}`;
+    } else {
+        console.log('No hay datos de posts de Facebook en sessionStorage.');
+    }
+
+    // Mostrar datos de Instagram
+    if (instagramData) {
+        document.getElementById('subsI').innerText = `Número de seguidores: ${instagramData.followers_count}`;
+    } else {
+        console.log('No hay datos de Instagram en sessionStorage.');
+    }
+
+    // Mostrar estadísticas de los posts de Instagram
+    if (instagramPostData) {
+        document.getElementById('likesI').innerText = `Total de Likes: ${instagramPostData.totalLikes}`;
+        document.getElementById('commentsI').innerText = `Total de Comentarios: ${instagramPostData.totalComments}`;
+        document.getElementById('viewsI').innerText = `Total de Vistas: ${instagramPostData.totalViews}`;
+    } else {
+        console.log('No hay datos de posts de Instagram en sessionStorage.');
+    }
+});
+

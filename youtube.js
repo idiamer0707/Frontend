@@ -10,6 +10,7 @@ window.addEventListener('load', async () => {
   const savedAccessToken = sessionStorage.getItem('accessToken');
   const savedChannelData = JSON.parse(sessionStorage.getItem('channelData'));
   const savedVideoStats = JSON.parse(sessionStorage.getItem('videoStats'));
+  console.log(savedAccessToken)
 
   if (savedAccessToken && savedChannelData && savedVideoStats) {
     // Mostrar los datos guardados
@@ -23,7 +24,7 @@ window.addEventListener('load', async () => {
     if (accessToken) {
       // Guardar el token en sessionStorage
       sessionStorage.setItem('accessToken', accessToken);
-      document.getElementById('output2').innerText = 'Autenticación completada con éxito.';
+      console.log("Autenticación completada con éxito.");
 
       // Obtener datos del canal y estadísticas de videos
       await fetchUserChannelData();

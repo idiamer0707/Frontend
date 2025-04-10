@@ -4,7 +4,7 @@ const redirectUri = 'https://idiamer0707.github.io/Frontend/';
 const scope = 'https://www.googleapis.com/auth/youtube';
  
 let accessToken = '';
-
+ 
 window.addEventListener('load', async () => {
     // Recuperar el token guardado en sessionStorage
     const savedAccessToken = sessionStorage.getItem('accessToken');

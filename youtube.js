@@ -14,7 +14,6 @@ window.addEventListener('load', async () => {
     
     if (!loginButton) {
       console.error("El botón con id 'btn-login-youtube' no existe en el DOM.");
-      return;
     }
   
     console.log("Token guardado:", savedAccessToken);

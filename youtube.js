@@ -7,7 +7,7 @@ let accessToken = '';
 
 window.addEventListener('load', async () => {
     // Recuperar el token guardado en sessionStorage
-    const savedAccessToken = sessionStorage.getItem('accessToken');
+    const savedAccessToken = sessionStorage.getItem('Youtube-accessToken');
     const savedChannelData = JSON.parse(sessionStorage.getItem('channelData'));
     const savedVideoStats = JSON.parse(sessionStorage.getItem('videoStats'));
   
@@ -21,10 +21,12 @@ window.addEventListener('load', async () => {
         // Mostrar los datos guardados
         displayChannelData(savedChannelData);
         displayVideoStats(savedVideoStats);
+
       } else {
         // Si no hay datos guardados, realiza los fetch con el token
         await fetchUserChannelData(savedAccessToken);
         await fetchVideoStatistics(savedAccessToken);
+        document.getElementById('btn-login-youtube').innerText('conectado')
       }
     } else {
       // Detectar si hay un nuevo token en la URL
@@ -33,7 +35,7 @@ window.addEventListener('load', async () => {
   
       if (accessToken) {
         // Guardar el token en sessionStorage y usarlo para los fetch
-        sessionStorage.setItem('accessToken', accessToken);
+        sessionStorage.setItem('Youtube-accessToken', accessToken);
         console.log("Autenticación completada con éxito. Nuevo token guardado.");
   
         await fetchUserChannelData(accessToken);

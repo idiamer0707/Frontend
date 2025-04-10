@@ -11,6 +11,8 @@ window.addEventListener('load', async () => {
   const savedChannelData = JSON.parse(sessionStorage.getItem('channelData'));
   const savedVideoStats = JSON.parse(sessionStorage.getItem('videoStats'));
   console.log(savedAccessToken)
+  console.log(savedChannelData)
+  console.log(savedVideoStats)
 
   if (savedAccessToken && savedChannelData && savedVideoStats) {
     // Mostrar los datos guardados

@@ -11,7 +11,7 @@ function initFacebookSDK(appId) {
     });
     console.log(`SDK inicializado con App ID: ${appId}`);
 }
-
+ 
 // Realizar el login con permisos de páginas
 function loginWithPage(appId) {
     initFacebookSDK(appId);

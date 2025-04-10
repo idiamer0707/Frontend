@@ -10,12 +10,18 @@ window.addEventListener('load', async () => {
     const savedAccessToken = sessionStorage.getItem('Youtube-accessToken');
     const savedChannelData = JSON.parse(sessionStorage.getItem('channelData'));
     const savedVideoStats = JSON.parse(sessionStorage.getItem('videoStats'));
+    const loginButton = document.getElementById('btn-login-youtube'); // Referencia al botón
   
     console.log("Token guardado:", savedAccessToken);
     console.log("Datos del canal guardados:", savedChannelData);
     console.log("Estadísticas de videos guardadas:", savedVideoStats);
   
     if (savedAccessToken) {
+
+        if (loginButton) {
+            loginButton.innerText = 'Conectado';
+        }
+
       // Si hay un token guardado, realiza los fetch con ese token
       if (savedChannelData && savedVideoStats) {
         // Mostrar los datos guardados
@@ -26,7 +32,7 @@ window.addEventListener('load', async () => {
         // Si no hay datos guardados, realiza los fetch con el token
         await fetchUserChannelData(savedAccessToken);
         await fetchVideoStatistics(savedAccessToken);
-        document.getElementById('btn-login-youtube').innerText('conectado')
+        
       }
     } else {
       // Detectar si hay un nuevo token en la URL
@@ -185,4 +191,10 @@ function displayChannelData(channelData) {
     // Ocultar el contenedor de datos y mostrar el mensaje
     document.getElementById('youtubeData').style.display = 'none';
     document.getElementById('youtubeMessage').style.display = 'block';
+
+    // Cambiar texto del botón a 'Conectar' si no se ha autenticado
+  const loginButton = document.getElementById('btn-login-youtube');
+  if (loginButton) {
+    loginButton.innerText = 'Conectar';
+  }
   }

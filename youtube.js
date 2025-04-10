@@ -2,7 +2,7 @@ const clientId = '47331039917-5heqfuko19cvc2le94t53mr1ad4f9hml.apps.googleuserco
 const clientSecret = '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';
 const redirectUri = 'https://idiamer0707.github.io/Frontend/logueo.html';
 const scope = 'https://www.googleapis.com/auth/youtube';
- 
+
 let accessToken = '';
  
 window.addEventListener('load', async () => {

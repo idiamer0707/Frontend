@@ -5,38 +5,45 @@ const scope = 'https://www.googleapis.com/auth/youtube';
 
 let accessToken = '';
 
-// Al cargar la página, verificar si hay datos en sessionStorage
 window.addEventListener('load', async () => {
-  const savedAccessToken = sessionStorage.getItem('accessToken');
-  const savedChannelData = JSON.parse(sessionStorage.getItem('channelData'));
-  const savedVideoStats = JSON.parse(sessionStorage.getItem('videoStats'));
-  console.log(savedAccessToken)
-  console.log(savedChannelData)
-  console.log(savedVideoStats)
-
-  if (savedAccessToken && savedChannelData && savedVideoStats) {
-    // Mostrar los datos guardados
-    displayChannelData(savedChannelData);
-    displayVideoStats(savedVideoStats);
-  } else {
-    // Detectar si hay un nuevo token en la URL
-    const hashParams = new URLSearchParams(window.location.hash.slice(1));
-    accessToken = hashParams.get('access_token');
-
-    if (accessToken) {
-      // Guardar el token en sessionStorage
-      sessionStorage.setItem('accessToken', accessToken);
-      console.log("Autenticación completada con éxito.");
-
-      // Obtener datos del canal y estadísticas de videos
-      await fetchUserChannelData();
-      await fetchVideoStatistics();
+    // Recuperar el token guardado en sessionStorage
+    const savedAccessToken = sessionStorage.getItem('accessToken');
+    const savedChannelData = JSON.parse(sessionStorage.getItem('channelData'));
+    const savedVideoStats = JSON.parse(sessionStorage.getItem('videoStats'));
+  
+    console.log("Token guardado:", savedAccessToken);
+    console.log("Datos del canal guardados:", savedChannelData);
+    console.log("Estadísticas de videos guardadas:", savedVideoStats);
+  
+    if (savedAccessToken) {
+      // Si hay un token guardado, realiza los fetch con ese token
+      if (savedChannelData && savedVideoStats) {
+        // Mostrar los datos guardados
+        displayChannelData(savedChannelData);
+        displayVideoStats(savedVideoStats);
+      } else {
+        // Si no hay datos guardados, realiza los fetch con el token
+        await fetchUserChannelData(savedAccessToken);
+        await fetchVideoStatistics(savedAccessToken);
+      }
     } else {
-      // Mostrar mensaje de inicio de sesión si no hay token
-      displayLoginPrompt();
+      // Detectar si hay un nuevo token en la URL
+      const hashParams = new URLSearchParams(window.location.hash.slice(1));
+      const accessToken = hashParams.get('access_token');
+  
+      if (accessToken) {
+        // Guardar el token en sessionStorage y usarlo para los fetch
+        sessionStorage.setItem('accessToken', accessToken);
+        console.log("Autenticación completada con éxito. Nuevo token guardado.");
+  
+        await fetchUserChannelData(accessToken);
+        await fetchVideoStatistics(accessToken);
+      } else {
+        // Si no hay token, mostrar mensaje de inicio de sesión
+        displayLoginPrompt();
+      }
     }
-  }
-});
+  });
 
 window.addEventListener('DOMContentLoaded', () => {
     const loginButton = document.getElementById('btn-login-youtube');
